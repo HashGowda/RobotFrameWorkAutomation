@@ -22,3 +22,9 @@ SelectingRadioButton
     select radio button   radiooptions    Male
 
     select radio button   radiooptions   FeMale
+
+    #selecting check boxes
+    Select Checkbox    Cricket
+    Select Checkbox    Hockey
+
+    Unselect Checkbox    Hockey
