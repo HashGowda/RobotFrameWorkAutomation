@@ -1,63 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230521 16:11:25.565" rpa="false" schemaversion="3">
-<suite id="s1" name="ListBox" source="E:\Software Testing\Python\RobotFrameWorkAutomation\TestCases\ListBox.robot">
-<test id="s1-t1" name="Testing Dropdown Selection" line="10">
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230531 12:58:55.627" rpa="false" schemaversion="3">
+<suite id="s1" name="SpeedTest" source="C:\Users\HHRA1231\PycharmProjects\Automation\TestCases\SpeedTest.robot">
+<test id="s1-t1" name="Reg Test" line="10">
+<kw name="Get Selenium Speed" library="SeleniumLibrary">
+<var>${spead}</var>
+<doc>Gets the delay that is waited after each Selenium command.</doc>
+<msg timestamp="20230531 12:58:55.803" level="INFO">${spead} = 0 seconds</msg>
+<status status="PASS" starttime="20230531 12:58:55.803" endtime="20230531 12:58:55.803"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${spead}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230531 12:58:55.803" endtime="20230531 12:58:55.803"/>
+</kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230521 16:11:25.811" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/select-menu'.</msg>
-<status status="PASS" starttime="20230521 16:11:25.810" endtime="20230521 16:11:36.149"/>
+<msg timestamp="20230531 12:58:55.804" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com/register'.</msg>
+<status status="PASS" starttime="20230531 12:58:55.804" endtime="20230531 12:58:59.395"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230521 16:11:36.150" endtime="20230521 16:11:36.293"/>
+<status status="PASS" starttime="20230531 12:58:59.396" endtime="20230531 12:58:59.514"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>1seconds</arg>
+<arg>2 seconds</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20230521 16:11:36.294" endtime="20230521 16:11:36.295"/>
+<status status="PASS" starttime="20230531 12:58:59.515" endtime="20230531 12:58:59.517"/>
 </kw>
-<kw name="Selecting Multiple Options Dropdown">
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>Select</arg>
-<arg>Blue</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20230521 16:11:36.298" level="INFO">Selecting options from selection list 'Select' by label Blue.</msg>
-<msg timestamp="20230521 16:11:38.667" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20230521 16:11:38.667" level="FAIL">List with locator 'Select' not found.</msg>
-<status status="FAIL" starttime="20230521 16:11:36.296" endtime="20230521 16:11:38.673"/>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>Gender</arg>
+<arg>M</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230531 12:58:59.518" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<status status="PASS" starttime="20230531 12:58:59.518" endtime="20230531 12:59:05.577"/>
 </kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>Select</arg>
-<arg>Black</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="NOT RUN" starttime="20230521 16:11:38.673" endtime="20230521 16:11:38.673"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:FirstName</arg>
+<arg>David</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230531 12:59:05.580" level="INFO">Typing text 'David' into text field 'name:FirstName'.</msg>
+<status status="PASS" starttime="20230531 12:59:05.578" endtime="20230531 12:59:11.687"/>
 </kw>
-<kw name="Unselect From List By Label" library="SeleniumLibrary">
-<arg>Select</arg>
-<arg>Black</arg>
-<doc>Unselects options from selection list ``locator`` by ``labels``.</doc>
-<status status="NOT RUN" starttime="20230521 16:11:38.673" endtime="20230521 16:11:38.673"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:LastName</arg>
+<arg>John</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230531 12:59:11.687" level="INFO">Typing text 'John' into text field 'name:LastName'.</msg>
+<status status="PASS" starttime="20230531 12:59:11.687" endtime="20230531 12:59:17.738"/>
 </kw>
-<status status="FAIL" starttime="20230521 16:11:36.296" endtime="20230521 16:11:38.673"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:Email</arg>
+<arg>anhc@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230531 12:59:17.739" level="INFO">Typing text 'anhc@gmail.com' into text field 'name:Email'.</msg>
+<status status="PASS" starttime="20230531 12:59:17.739" endtime="20230531 12:59:23.791"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20230521 16:11:38.673" endtime="20230521 16:11:38.673"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:Password</arg>
+<arg>davidjohn</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230531 12:59:23.794" level="INFO">Typing text 'davidjohn' into text field 'name:Password'.</msg>
+<status status="PASS" starttime="20230531 12:59:23.793" endtime="20230531 12:59:29.902"/>
 </kw>
-<status status="FAIL" starttime="20230521 16:11:25.810" endtime="20230521 16:11:38.673">List with locator 'Select' not found.</status>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:ConfirmPassword</arg>
+<arg>davidjohn</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230531 12:59:29.904" level="INFO">Typing text 'davidjohn' into text field 'name:ConfirmPassword'.</msg>
+<status status="PASS" starttime="20230531 12:59:29.903" endtime="20230531 12:59:36.002"/>
+</kw>
+<kw name="Get Selenium Speed" library="SeleniumLibrary">
+<var>${spead}</var>
+<doc>Gets the delay that is waited after each Selenium command.</doc>
+<msg timestamp="20230531 12:59:36.004" level="INFO">${spead} = 2 seconds</msg>
+<status status="PASS" starttime="20230531 12:59:36.003" endtime="20230531 12:59:36.004"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${spead}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230531 12:59:36.005" endtime="20230531 12:59:36.006"/>
+</kw>
+<status status="PASS" starttime="20230531 12:58:55.802" endtime="20230531 12:59:36.007"/>
 </test>
-<status status="FAIL" starttime="20230521 16:11:25.565" endtime="20230521 16:11:38.673"/>
+<status status="PASS" starttime="20230531 12:58:55.630" endtime="20230531 12:59:36.011"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="ListBox">ListBox</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="SpeedTest">SpeedTest</stat>
 </suite>
 </statistics>
 <errors>
